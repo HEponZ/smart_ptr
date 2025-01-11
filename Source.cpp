@@ -7,7 +7,9 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	int mas[3]{ 1,2,3 };
+	//Это уникальный указатель, для хранения адреса на ячейку массива
 	my_unique_ptr<int> ptr_test{ new int(mas[0]) };
+	//Это указатель со счетчиком, он считает сколько указателей создано на одно место
 	my_shared_ptr<int> ptr_test2{ new int(mas[2]) };
 	my_shared_ptr<int> ptr_test3(ptr_test2);
 
